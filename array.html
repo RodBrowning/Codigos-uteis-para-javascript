@@ -123,15 +123,19 @@
 		console.log(array1);*/
 
 		//reduce method
-		//Retorna um array com quantas string iguais ele contem.
+		/** Retorna um array com quantas string iguais ele contem.
+		  * Use Case: Parse the array and return an object that
+		  * contains the number of times each string occured in the array.
+		  */
+
 		var reduceArray = ["gato", "cachorro", "gato", "rato", "cachorro", "gato", "mais", "mais"];
 		console.log(reduceArray);
-		var reduceMath = reduceArray.reduce(function(prev, next,){
-			prev[next] = ++prev[next] || 1;
-			return prev
+		var reduceToAnObject = reduceArray.reduce(function(objeto, item_do_array,){
+			objeto[item_do_array] = ++objeto[item_do_array] || 1;
+			return objeto
 		},{});
 
-		console.log(reduceMath);
+		console.log(reduceToAnObject);
 
 
 
